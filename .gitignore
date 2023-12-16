@@ -6,4 +6,4 @@
 **/terraform.tfstate.backup
 
 # Arquivos e diretórios do Ansible a serem ignorados
-**/host.ini
+**/hosts.ini
