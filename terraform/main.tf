@@ -26,8 +26,8 @@ resource "google_compute_instance" "vm_ubuntu" {
   }
 }
 
-resource "google_compute_firewall" "allow_http_outbound" {
-  name    = "allow-http-out"
+resource "google_compute_firewall" "allow_http_inbound" {
+  name    = "allow-http-in"
   network = "default"
 
   allow {
@@ -35,6 +35,6 @@ resource "google_compute_firewall" "allow_http_outbound" {
     ports    = ["80"]
   }
 
-  direction = "EGRESS"
-  destination_ranges = ["0.0.0.0/0"]
+  direction = "INGRESS"
+  source_ranges = ["0.0.0.0/0"]
 }
