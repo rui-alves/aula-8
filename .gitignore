@@ -1,0 +1,6 @@
+# Arquivos e diretórios do Terraform a serem ignorados
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/.terraform.lock.hcl
+**/terraform.tfstate.backup
